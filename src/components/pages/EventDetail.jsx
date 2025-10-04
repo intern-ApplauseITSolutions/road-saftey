@@ -184,8 +184,8 @@ Based on a detailed assessment of the prevailing condition in conjunction with c
       fullDescription: `On 19th February 2021, Safety Research Foundation (SRF) organized an event focused on "Honoring the Police Personnel on duty, who have put the Nation and its Citizens ahead of themselves in the dark times. As a tribute to their selfless service, a small token of appreciation from SRF, in the form of distribution of Reflective safety jacket has been organized in the city of Nagpur. Reflective safety Apparel caters to the safety needs of people working at sensitive and dangerous area especially at night or poor light condition.
 
 SRF team visited MIDC Buttibori police station Nagpur and they gave a brief introduction about SRF and distributed the Reflective Safety Jackets under the aegis of the DYSP Mr. Rajendra Chauhan, inspector Mr. Maruti Muluk and other police personnel from MIDC Buttibori police station participated in the event. The event was well received by the participants with many appreciating SRF's gesture.`,
-      image: "https://via.placeholder.com/400x250/059669/ffffff?text=Police+Safety+Jackets",
-      images: [goYellow1, goYellow2],
+      image: roadSafety1,
+      images: [roadSafety1, roadSafety2],
       featured: false
     }
   ];
