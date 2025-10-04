@@ -2,6 +2,20 @@ import React, { useState } from 'react';
 import { Calendar, MapPin, Users, ArrowRight, Clock, Tag } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+// Import Child Safety Seat Awareness Session images
+import childSafety1 from '../../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0001.jpg';
+import childSafety2 from '../../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0003.jpg';
+import childSafety3 from '../../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0005.jpg';
+import childSafety4 from '../../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0006.jpg';
+import childSafety5 from '../../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0014.jpg';
+
+// Import local images as placeholders for Road Safety images
+import roadSafety1 from '../../../assets/images/Road_Safety_Training.jpg';
+import roadSafety2 from '../../../assets/images/Create_Public_awareness.jpg';
+import roadSafety3 from '../../../assets/images/People_Driver_Training.jpg';
+import roadSafety4 from '../../../assets/images/Road_Infrastructure.jpg';
+import roadSafety5 from '../../../assets/images/carousel-3.jpg';
+
 const eventsData = [
   {
     id: 1,
@@ -17,7 +31,8 @@ The program included an engaging presentation on the types of child safety seats
 Attendees appreciated the efforts of SRF, expressing gratitude for organizing such a meaningful and impactful session that emphasized the need for child safety on the roads.
 
 Glimpses of Program`,
-    image: "https://via.placeholder.com/400x250/3b82f6/ffffff?text=Child+Safety+Seat+Session",
+    image: childSafety1,
+    images: [childSafety1, childSafety2, childSafety3, childSafety4, childSafety5],
     featured: true
   },
   {
@@ -34,7 +49,8 @@ The sessions focused on key topics such as helmet usage for two-wheeler safety, 
 SRF continues its commitment to fostering safer roads through education and advocacy, with these sessions representing a crucial step toward nurturing a culture of safety among young road users.
 
 Glimpses of Program`,
-    image: "https://via.placeholder.com/400x250/10b981/ffffff?text=School+Awareness+Sessions",
+    image: roadSafety1,
+    images: [roadSafety1, roadSafety2, roadSafety3, roadSafety4, roadSafety5],
     featured: true
   },
   {
@@ -168,6 +184,7 @@ const NewsAndEvents = () => {
     : eventsData.filter(event => event.category === filter);
 
   const handleReadMore = (eventId) => {
+    console.log('Navigating to event ID:', eventId);
     navigate(`/event/${eventId}`);
   };
 

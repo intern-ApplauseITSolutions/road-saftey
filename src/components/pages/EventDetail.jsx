@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Calendar, MapPin, ArrowLeft, Users, Building2, Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Import Go Yellow event images
-import goYellow1 from '../../assets/events/1/1-300x225.jpg';
-import goYellow2 from '../../assets/events/1/2-300x225.jpg';
-import goYellow3 from '../../assets/events/1/2.jpg';
-import goYellow4 from '../../assets/events/1/3-300x225.jpg';
-import goYellow5 from '../../assets/events/1/4-300x225.jpg';
+// Import Child Safety Seat Awareness Session images
+import childSafety1 from '../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0001.jpg';
+import childSafety2 from '../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0003.jpg';
+import childSafety3 from '../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0005.jpg';
+import childSafety4 from '../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0006.jpg';
+import childSafety5 from '../../assets/images/ChildSafetySeatAwarenessSession/IMG-20250112-WA0014.jpg';
+
+// Import local images as placeholders for Road Safety images
+import roadSafety1 from '../../assets/images/Road_Safety_Training.jpg';
+import roadSafety2 from '../../assets/images/Create_Public_awareness.jpg';
+import roadSafety3 from '../../assets/images/People_Driver_Training.jpg';
+import roadSafety4 from '../../assets/images/Road_Infrastructure.jpg';
+import roadSafety5 from '../../assets/images/carousel-3.jpg';
 
 const EventDetail = () => {
   const { id } = useParams();
@@ -33,8 +40,8 @@ The program included an engaging presentation on the types of child safety seats
 Attendees appreciated the efforts of SRF, expressing gratitude for organizing such a meaningful and impactful session that emphasized the need for child safety on the roads.
 
 Glimpses of Program`,
-      image: "https://via.placeholder.com/400x250/3b82f6/ffffff?text=Child+Safety+Seat+Session",
-      images: [goYellow1, goYellow2, goYellow3, goYellow4, goYellow5],
+      image: childSafety1,
+      images: [childSafety1, childSafety2, childSafety3, childSafety4, childSafety5],
       featured: true
     },
     {
@@ -51,8 +58,8 @@ The sessions focused on key topics such as helmet usage for two-wheeler safety, 
 SRF continues its commitment to fostering safer roads through education and advocacy, with these sessions representing a crucial step toward nurturing a culture of safety among young road users.
 
 Glimpses of Program`,
-      image: "https://via.placeholder.com/400x250/10b981/ffffff?text=School+Awareness+Sessions",
-      images: [goYellow1, goYellow2, goYellow3],
+      image: roadSafety1,
+      images: [roadSafety1, roadSafety2, roadSafety3],
       featured: true
     },
     {
@@ -184,7 +191,10 @@ SRF team visited MIDC Buttibori police station Nagpur and they gave a brief intr
   ];
 
   // Find the event by ID
+  console.log('EventDetail - Looking for event ID:', id, 'Type:', typeof id);
+  console.log('Available events:', eventsData.map(e => ({ id: e.id, title: e.title })));
   const event = eventsData.find(e => e.id === parseInt(id));
+  console.log('Found event:', event ? event.title : 'Not found');
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
