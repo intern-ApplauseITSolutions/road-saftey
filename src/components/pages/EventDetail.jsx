@@ -79,7 +79,7 @@ SRF is committed towards advocating road safety amongst all age groups and categ
 
 Glimpses of Program`,
       image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=St+Joseph+School+Program",
-      images: [goYellow1, goYellow2],
+      images: [roadSafety1, roadSafety2],
       featured: false
     },
     {
@@ -95,7 +95,7 @@ This program was an introduction session on the importance of traffic rules and 
 
 This was an interactive session with the students and a message was passed through the students to their respective parents on Road Safety and follow Traffic Rules and Regulations.`,
       image: "https://via.placeholder.com/400x250/f59e0b/ffffff?text=St+Arnolds+Central+School",
-      images: [goYellow1],
+      images: [roadSafety1],
       featured: false
     },
     {
@@ -111,7 +111,7 @@ This program was an introduction session on the importance of traffic rules and 
 
 This was an interactive session with students and a message was passed through the students to their respective parents on the importance on Road safety, Traffic Rules and Regulations.`,
       image: "https://via.placeholder.com/400x250/ef4444/ffffff?text=St+Arnolds+School",
-      images: [goYellow1, goYellow2],
+      images: [roadSafety1, roadSafety2],
       featured: false
     },
     {
@@ -127,7 +127,7 @@ This program was an introduction session on the importance of traffic rules and 
 
 This session was an interaction with students and a message was passed through the students to their respective parents on the importance traffic rules and regulations.`,
       image: "https://via.placeholder.com/400x250/06b6d4/ffffff?text=Apte+Prashala",
-      images: [goYellow1, goYellow3],
+      images: [roadSafety1, roadSafety3],
       featured: false
     },
     {
@@ -143,7 +143,7 @@ In this awareness program we tagged the road users with a YELLOW badge Symbolisi
 
 On 26th Feb 2022 Mrs Universe Australasian Dr Prachiti Punde also participated our cause of road safety awareness Go Yellow, Dr Prachiti interacted with the general road users and made them aware on abiding the safety norms and following all the road safety rules. She along with SRF team distributed the Yellow Badges Psi Mr. Nilesh Patil and the police station staff Of Bal Gandharva police station.`,
       image: "https://via.placeholder.com/400x250/eab308/ffffff?text=Go+Yellow+Campaign",
-      images: [goYellow1, goYellow2, goYellow3, goYellow4, goYellow5],
+      images: [roadSafety1, roadSafety2, roadSafety3, roadSafety4, roadSafety5],
       featured: true
     },
     {
@@ -155,7 +155,7 @@ On 26th Feb 2022 Mrs Universe Australasian Dr Prachiti Punde also participated o
       content: "Safety Research Foundation conducted an online session on Scientific Crash Investigation and Data Collection for Indian Chemical Council (ICC) employees on 28th September 2021. The webinar session was part of the workshop Emergency Response Services Training organized by ICC. The importance of scientific crash investigation and its procedures were discussed in this session.",
       fullDescription: `Safety Research Foundation conducted an online session on "Scientific Crash Investigation and Data Collection" for Indian Chemical Council (ICC) employees on 28th September 2021. The webinar session was part of the workshop "Emergency Response Services Training" organized by ICC. The importance of scientific crash investigation and its procedures were discussed in this session.`,
       image: "https://via.placeholder.com/400x250/7c3aed/ffffff?text=ICC+Webinar",
-      images: [goYellow1, goYellow2],
+      images: [roadSafety1, roadSafety2],
       featured: false
     },
     {
@@ -171,7 +171,7 @@ The study analysed historic crash trends based on FIRs compiled, traffic composi
 
 Based on a detailed assessment of the prevailing condition in conjunction with crash and traffic data, four critical zones were identified; Navale bridge, Katraj tunnel, Selfie point, and Swami Narayan Mandir to Katraj tunnel stretch. Each zone had its specific safety concern leading at least 3 fatal crashes in the last three years. Recommendations included repositioning bus stops, dedicated merging lanes, more visible lane markings, removing hazardous objects, remapping traffic signal cycle timings etc. Comprehensive report suggesting short & long term measures has been submitted to the concerned authorities. SRF is committed to extend support during implementation phase.`,
       image: "https://via.placeholder.com/400x250/dc2626/ffffff?text=NH+48+Safety+Audit",
-      images: [goYellow1, goYellow3, goYellow4],
+      images: [roadSafety1, roadSafety3, roadSafety4],
       featured: true
     },
     {
@@ -184,17 +184,14 @@ Based on a detailed assessment of the prevailing condition in conjunction with c
       fullDescription: `On 19th February 2021, Safety Research Foundation (SRF) organized an event focused on "Honoring the Police Personnel on duty, who have put the Nation and its Citizens ahead of themselves in the dark times. As a tribute to their selfless service, a small token of appreciation from SRF, in the form of distribution of Reflective safety jacket has been organized in the city of Nagpur. Reflective safety Apparel caters to the safety needs of people working at sensitive and dangerous area especially at night or poor light condition.
 
 SRF team visited MIDC Buttibori police station Nagpur and they gave a brief introduction about SRF and distributed the Reflective Safety Jackets under the aegis of the DYSP Mr. Rajendra Chauhan, inspector Mr. Maruti Muluk and other police personnel from MIDC Buttibori police station participated in the event. The event was well received by the participants with many appreciating SRF's gesture.`,
-      image: roadSafety1,
+      image: "https://via.placeholder.com/400x250/059669/ffffff?text=Police+Safety+Jackets",
       images: [roadSafety1, roadSafety2],
       featured: false
     }
   ];
 
   // Find the event by ID
-  console.log('EventDetail - Looking for event ID:', id, 'Type:', typeof id);
-  console.log('Available events:', eventsData.map(e => ({ id: e.id, title: e.title })));
   const event = eventsData.find(e => e.id === parseInt(id));
-  console.log('Found event:', event ? event.title : 'Not found');
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
