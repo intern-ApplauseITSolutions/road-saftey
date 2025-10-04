@@ -6,6 +6,8 @@ import AboutPage from './pages/AboutPage';
 import FocusPage from './pages/FocusPage';
 import EventsPage from './pages/EventsPage';
 import ContactPage from './pages/ContactPage';
+import EventDetail from './components/pages/EventDetail';
+import TeamDetail from './components/pages/TeamDetail';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/focus" element={<FocusPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/event/:id" element={<EventDetail />} />
+            <Route path="/team/:id" element={<TeamDetail />} />
           </Routes>
         </main>
         <Footer />

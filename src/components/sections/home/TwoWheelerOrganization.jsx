@@ -1,35 +1,219 @@
 import React, { useEffect, useRef } from 'react';
-import { Bike } from 'lucide-react';
+import { Shield, Calendar, MapPin } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function TwoWheelerOrganization() {
   const scrollContainerRef = useRef(null);
+  const navigate = useNavigate();
 
+  // Comprehensive events data - all events for display
   const events = [
     {
-      title: "Reflective Safety jacket Distribution event - Nagpur",
-      date: "25-26 Feb, Pune University Chowk"
+      id: 1,
+      title: "Child Safety Seat Awareness Session",
+      date: "11th January 2025",
+      location: "Tuljabhavani Housing Society, Ravet, Pune",
+      category: "Awareness Session",
+      content: "On the occasion of National Road Safety Week, Safety Research Foundation (SRF) organized a Child Safety Seat Awareness session."
     },
     {
-      title: "Webinar on Crash Investigation",
-      date: "28 Sep 2021, Online"
+      id: 2,
+      title: "Road Safety Awareness Sessions",
+      date: "27th November 2024",
+      location: "Three Schools in Khadki, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation, in collaboration with Rotary Club Khadki, successfully conducted Road Safety Awareness sessions at three prominent schools."
     },
     {
-      title: "Road Safety Engineering – Pune",
-      date: "Katraj - Navale NH48 study"
+      id: 3,
+      title: "Road Safety Awareness Program",
+      date: "01 & 02 Sep 2022",
+      location: "St Joseph Boys High School, Kirkee, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted 'Road Safety Awareness Program' for the students at St Joseph Boys High School."
     },
     {
-      title: "Reflective Jacket Distribution",
-      date: "19 Feb 2021, Nagpur"
+      id: 4,
+      title: "Road Safety Awareness Program",
+      date: "29th July 2022",
+      location: "St Arnolds Central School Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted a School Road safety awareness program for St Arnold's Central School Pune."
     },
     {
-      title: "Safety Mask Distribution",
-      date: "Sep 2021, Pune"
+      id: 5,
+      title: "Road Safety Awareness Program",
+      date: "22nd July 2022",
+      location: "St Arnolds School Pune, Wadgaon Shari",
+      category: "School Program",
+      content: "Safety Research Foundation conducted a School Road safety awareness program for St Arnolds School Pune Wadgaon Shari."
     },
     {
-      title: "Road Safety Webinar Series",
-      date: "Aug 2021, Multiple cities"
+      id: 6,
+      title: "Road Safety Awareness Program",
+      date: "12th July 2022",
+      location: "Apte Prashala Deccan Gymkhana Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted a School Road safety awareness program for Apte Prashala."
+    },
+    {
+      id: 7,
+      title: "Go Yellow Road Safety Awareness",
+      date: "25th & 26th Feb 2022",
+      location: "Pune University Chowk & Vimanagar Chowk",
+      category: "Public Awareness",
+      content: "SRF team conducted a Road safety Awareness Program titled GO YELLOW on 25th Feb @Pune University Chowk & Vimanagar Chowk."
+    },
+    {
+      id: 8,
+      title: "Webinar on Scientific Crash Investigation",
+      date: "28th September 2021",
+      location: "Online - Indian Chemical Council",
+      category: "Webinar",
+      content: "Safety Research Foundation conducted an online session on Scientific Crash Investigation and Data Collection for Indian Chemical Council (ICC) employees."
+    },
+    {
+      id: 9,
+      title: "Road Safety Audit: NH 48",
+      date: "24th March 2021",
+      location: "Katraj – Dehu Road Bypass, Pune",
+      category: "Safety Audit",
+      content: "Safety Research Foundation undertook Road Safety Audit of Katraj – Navale Section of NH 48."
+    },
+    {
+      id: 10,
+      title: "Reflective Safety Jacket Distribution",
+      date: "19th February 2021",
+      location: "MIDC Buttibori Police Station, Nagpur",
+      category: "Police Support",
+      content: "Safety Research Foundation organized an event focused on Honoring the Police Personnel on duty."
+    },
+    {
+      id: 11,
+      title: "Reflective Safety Jacket Distribution - Buttibori",
+      date: "19th February 2021",
+      location: "Buttibori Police Station, Nagpur",
+      category: "Police Support",
+      content: "SRF team organized a safety Jacket distribution event at Buttibori Police Station, Nagpur."
+    },
+    {
+      id: 12,
+      title: "Reflective Safety Jacket Distribution - Umred",
+      date: "18th February 2021",
+      location: "Umred Police Station, Nagpur",
+      category: "Police Support",
+      content: "SRF team organized a safety Jacket distribution event at Umred Police Station, Nagpur."
+    },
+    {
+      id: 13,
+      title: "Reflective Safety Jacket Distribution - Kalameshwar",
+      date: "18th February 2021",
+      location: "Kalameshwar Police Station, Nagpur",
+      category: "Police Support",
+      content: "SRF team organized a safety Jacket distribution event at Kalameshwar Police Station, Nagpur."
+    },
+    {
+      id: 14,
+      title: "Safety Mask Distribution Event - Pune",
+      date: "11th September 2020",
+      location: "Chaturshringi Police Station, Pune",
+      category: "Police Support",
+      content: "SRF team organised a safety mask distribution event at Chaturshringi Police Station, Pune City."
+    },
+    {
+      id: 15,
+      title: "Road Safety Webinar Series 3",
+      date: "24th Aug 2020",
+      location: "Online - Rotary Pimpri Pune",
+      category: "Webinar",
+      content: "Safety Research Foundation conducted a webinar on What can we learn from real world traffic accidents?"
+    },
+    {
+      id: 16,
+      title: "Road Safety Webinar Series 2",
+      date: "16th Aug 2020",
+      location: "Online - Engineering Students",
+      category: "Webinar",
+      content: "Safety Research Foundation conducted a webinar on Crash Investigation and its Importance."
+    },
+    {
+      id: 17,
+      title: "Safety Mask Distribution Event - Coimbatore",
+      date: "15th August 2020",
+      location: "Sulur Police Station, Coimbatore",
+      category: "Police Support",
+      content: "Safety Research Foundation organised an event focused on Honouring the Police Personnel on duty during COVID times."
+    },
+    {
+      id: 18,
+      title: "Safety Mask Distribution Event - Ahmedabad",
+      date: "15th August 2020",
+      location: "I-traffic Police Station, Ahmedabad",
+      category: "Police Support",
+      content: "SRF team participated in Independence Day ceremony and organised safety mask distribution event."
+    },
+    {
+      id: 19,
+      title: "Road Safety Webinar Series 1",
+      date: "9th Aug 2020",
+      location: "Online - Engineering Students",
+      category: "Webinar",
+      content: "Safety Research Foundation conducted a webinar on Crash Investigation and its Importance."
+    },
+    {
+      id: 20,
+      title: "Road Safety Awareness Program - Chetan Dattaji Gaikwad High School",
+      date: "24th Sep 2019",
+      location: "Chetan Dattaji Gaikwad High School, Khadki, Pune",
+      category: "School Program",
+      content: "The Session on Traffic violations commonly seen on our roads and its eventualities, Pedestrian Responsibilities, Speeding and its repercussions."
+    },
+    {
+      id: 21,
+      title: "Road Safety Awareness Program - Symbiosis Open Skills University",
+      date: "05th Sep 2019",
+      location: "Symbiosis Open Skills University, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted the Session focused on importance of good quality data collection and use of data in improving road safety."
+    },
+    {
+      id: 22,
+      title: "Road Safety Awareness Program - NCL Junior College",
+      date: "04th Oct 2018",
+      location: "NCL Junior College, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted the Session with co-organizer Rotary Club of Khadki focused on Effects of Speeding, Pedestrian Behaviour on roads."
+    },
+    {
+      id: 23,
+      title: "Road Safety Awareness Program - Loyola High School",
+      date: "18th Aug 2018",
+      location: "Loyola High School, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted the Session with co-organizer Rotary Club of Khadki focused on Effects of Speeding, Pedestrian Behaviour on roads."
+    },
+    {
+      id: 24,
+      title: "Road Safety Awareness Program - Vidyanchal School",
+      date: "20th Dec 2017",
+      location: "Vidyanchal School, Pune",
+      category: "School Program",
+      content: "Safety Research Foundation conducted the Session with co-organizer Rotary Club of Khadki focused on Effects of Speeding, Pedestrian Behaviour on roads."
+    },
+    {
+      id: 25,
+      title: "Road Safety Awareness Program - Manchester International School",
+      date: "02nd Nov 2017",
+      location: "Manchester International School, Coimbatore",
+      category: "School Program",
+      content: "Safety Research Foundation conducted the Session with co-organizer Rotary International District 3201 Coimbatore Region focused on Safety system usage."
     }
   ];
+
+  const handleEventClick = (event) => {
+    // Navigate to event detail page in same window
+    navigate(`/event/${event.id}`);
+  };
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -101,13 +285,13 @@ export default function TwoWheelerOrganization() {
   return (
     <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with Bike Logo */}
+        {/* Header with Shield Logo */}
         <div className="flex items-center justify-center mb-10 sm:mb-12 md:mb-16">
           <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-primary to-primary"></div>
           <div className="mx-4 sm:mx-6 flex items-center gap-2 sm:gap-3">
-            <Bike className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={2} />
+            <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={2} />
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center">
-              Two Wheeler Organization
+              Road Safety Initiatives
             </h2>
           </div>
           <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent via-primary to-primary"></div>
@@ -158,6 +342,7 @@ export default function TwoWheelerOrganization() {
               {events.map((event, index) => (
                 <div 
                   key={`event-1-${index}`}
+                  onClick={() => handleEventClick(event)}
                   className="event-card relative bg-gradient-to-r from-primary/5 to-white p-4 sm:p-5 rounded-lg border-l-4 border-primary cursor-pointer group overflow-hidden"
                 >
                   {/* Animated background glow */}
@@ -170,15 +355,24 @@ export default function TwoWheelerOrganization() {
                   <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
                   
                   <div className="relative z-10">
-                    <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight">
-                      {event.title}
-                    </h5>
-                    <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
-                      </svg>
-                      <span className="leading-tight">{event.date}</span>
-                    </p>
+                    <div className="flex items-start justify-between mb-2">
+                      <h5 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
+                        {event.title}
+                      </h5>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap">
+                        {event.category}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
+                        <span className="leading-tight">{event.date}</span>
+                      </p>
+                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
+                        <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
+                        <span className="leading-tight">{event.location}</span>
+                      </p>
+                    </div>
                   </div>
                   
                   {/* Subtle corner decoration */}
@@ -192,6 +386,7 @@ export default function TwoWheelerOrganization() {
               {events.map((event, index) => (
                 <div 
                   key={`event-2-${index}`}
+                  onClick={() => handleEventClick(event)}
                   className="event-card relative bg-gradient-to-r from-primary/5 to-white p-4 sm:p-5 rounded-lg border-l-4 border-primary cursor-pointer group overflow-hidden"
                 >
                   {/* Animated background glow */}
@@ -204,15 +399,24 @@ export default function TwoWheelerOrganization() {
                   <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
                   
                   <div className="relative z-10">
-                    <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight">
-                      {event.title}
-                    </h5>
-                    <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
-                      </svg>
-                      <span className="leading-tight">{event.date}</span>
-                    </p>
+                    <div className="flex items-start justify-between mb-2">
+                      <h5 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
+                        {event.title}
+                      </h5>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap">
+                        {event.category}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
+                        <span className="leading-tight">{event.date}</span>
+                      </p>
+                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
+                        <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
+                        <span className="leading-tight">{event.location}</span>
+                      </p>
+                    </div>
                   </div>
                   
                   {/* Subtle corner decoration */}

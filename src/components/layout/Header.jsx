@@ -1,4 +1,4 @@
-import { Phone, Mail, Heart, Menu, X, Linkedin, Facebook } from 'lucide-react';
+import { Phone, Mail, Heart, Menu, X, Linkedin, Facebook, HandHeart } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../../assets/logo/logo.png';
@@ -14,11 +14,19 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const scrollToPledge = () => {
+    const element = document.getElementById('pledge');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       {/* Top Bar */}
       <div className="bg-gradient-primary text-white py-2">
-        <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <a href="tel:+917030910122" className="flex items-center gap-1 hover:opacity-80">
               <Phone size={14} />
@@ -54,8 +62,8 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-white shadow-lg sticky top-0 z-[100]">
-        <div className="container mx-auto px-4 py-4">
+      <header className="bg-white shadow-lg sticky top-0 z-[100] w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3">
               <img src={logo} alt="Safety Research Foundation" className="h-12 md:h-16" />
@@ -81,6 +89,10 @@ export default function Header() {
               <button onClick={scrollToDonate} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
                 <Heart size={16} fill="currentColor" />
                 Donate
+              </button>
+              <button onClick={scrollToPledge} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
+                <HandHeart size={16} />
+                Take a Pledge
               </button>
             </nav>
 
@@ -112,6 +124,10 @@ export default function Header() {
                 <button onClick={scrollToDonate} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
                   <Heart size={16} fill="currentColor" />
                   Donate
+                </button>
+                <button onClick={scrollToPledge} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
+                  <HandHeart size={16} />
+                  Take a Pledge
                 </button>
               </div>
             </nav>

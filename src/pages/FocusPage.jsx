@@ -1,7 +1,9 @@
+import RoadSafetyFocus from '../components/sections/ourfocus/RoadSafetyFocus';
+
 export default function FocusPage() {
   return (
     <div>
-      {/* Page content will go here */}
+      <RoadSafetyFocus />
     </div>
   );
 }

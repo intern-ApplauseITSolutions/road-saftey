@@ -1,25 +1,81 @@
-import { Shield, ArrowRight, AlertCircle } from 'lucide-react';
+import { Shield, ArrowRight, AlertCircle, RefreshCw } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { getAllBannerImages, refreshBannerImages } from '../../../utils/imageLoader';
 
-// Import the new banner images
-import bannerImg1 from '../../../assets/images/banner/asphalt-road-forest.jpg';
-import bannerImg2 from '../../../assets/images/banner/car-asphalt-road-summer.jpg';
-import bannerImg3 from '../../../assets/images/banner/panoramic-view-boulevard-with-cars-metropolitan-city-summer-days.jpg';
-import bannerImg4 from '../../../assets/images/banner/road-bridge-surrounded-by-hills-greenery-keve-river-angola.jpg';
+// Static imports as fallback
+import img1 from '../../../assets/images/banner/1.jpg';
+import img2 from '../../../assets/images/banner/2.jpg';
+import img3 from '../../../assets/images/banner/IMG_2239.jpg';
 
-const images = [bannerImg1, bannerImg2, bannerImg3, bannerImg4];
+const staticImages = [img1, img2, img3];
 const slideDuration = 5000; // 5 seconds
+
+// Debug: Log static images
+console.log('Static images loaded:', staticImages);
 
 export default function HeroBanner() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load images dynamically
+  useEffect(() => {
+    // For now, just use static images directly
+    console.log('HeroBanner: Using static images directly');
+    setImages(staticImages);
+    setIsLoading(false);
+    
+    // Uncomment this to try dynamic loading
+    // loadImages();
+  }, []);
+
+  const loadImages = async () => {
+    console.log('HeroBanner: Starting to load images...');
+    setIsLoading(true);
+    try {
+      const bannerImages = getAllBannerImages();
+      console.log('HeroBanner: Received images:', bannerImages.length, bannerImages);
+      
+      // Use dynamic images if available, otherwise fallback to static
+      if (bannerImages.length > 0) {
+        setImages(bannerImages);
+        console.log('HeroBanner: Using dynamic images');
+      } else {
+        console.log('HeroBanner: Using static fallback images');
+        setImages(staticImages);
+      }
+      
+      setCurrentImage(0); // Reset to first image
+      setIsLoading(false);
+      console.log('HeroBanner: Images loaded successfully');
+    } catch (error) {
+      console.error('HeroBanner: Failed to load banner images, using static fallback:', error);
+      setImages(staticImages);
+      setIsLoading(false);
+    }
+  };
+
+  const handleRefreshImages = () => {
+    try {
+      const refreshedImages = refreshBannerImages();
+      setImages(refreshedImages);
+      setCurrentImage(0);
+    } catch (error) {
+      console.error('Failed to refresh banner images:', error);
+      // Fallback to regular load
+      loadImages();
+    }
+  };
 
   // Image carousel effect
   useEffect(() => {
+    if (images.length === 0) return;
+    
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, slideDuration);
     return () => clearInterval(interval);
-  }, []);
+  }, [images]);
 
   return (
     <section id="home" className="relative overflow-hidden bg-white">
@@ -77,51 +133,96 @@ export default function HeroBanner() {
 
           {/* Right Side - Image Carousel */}
           <div className="relative h-[280px] sm:h-[320px] md:h-[340px] lg:min-h-[320px] lg:h-auto order-1 lg:order-2 bg-gray-100">
-            {/* Image Carousel */}
-            <div className="absolute inset-0 bg-gray-100">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                    index === currentImage ? 'opacity-100' : 'opacity-0'
-                  }`}>
-                  <img
-                    src={image}
-                    alt={`Road Safety Background ${index + 1}`}
-                    className="w-full h-full object-cover object-center"
-                  />
+            {/* Loading State */}
+            {isLoading && (
+              <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                  <p className="text-gray-600 text-sm">Loading banner images...</p>
                 </div>
-              ))}
-              
-              {/* Subtle Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-primary/20"></div>
-            </div>
+              </div>
+            )}
 
-            {/* Progress Indicators */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`transition-all duration-300 ${
-                    index === currentImage ? 'w-12 h-3' : 'w-3 h-3'
-                  }`}
-                >
-                  <div className={`h-full rounded-full transition-all duration-300 ${
-                    index === currentImage 
-                      ? 'bg-primary shadow-lg' 
-                      : 'bg-white/60 hover:bg-white/80'
-                  }`}>
-                    {index === currentImage && (
-                      <div 
-                        className="h-full bg-white rounded-full animate-progress-bar"
-                        style={{ animationDuration: `${slideDuration}ms` }}
-                      ></div>
-                    )}
+            {/* No Images Fallback */}
+            {!isLoading && images.length === 0 && (
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-gray-500" />
                   </div>
-                </button>
-              ))}
-            </div>
+                  <h3 className="text-lg font-semibold text-gray-700 mb-2">No Banner Images</h3>
+                  <p className="text-gray-500 text-sm">Add images to the banner folder to see them here</p>
+                </div>
+              </div>
+            )}
+
+            {/* Image Carousel */}
+            {!isLoading && images.length > 0 && (
+              <>
+                <div className="absolute inset-0 bg-gray-100">
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                        index === currentImage ? 'opacity-100' : 'opacity-0'
+                      }`}>
+                      <img
+                        src={image}
+                        alt={`Road Safety Background ${index + 1}`}
+                        className="w-full h-full object-cover object-center"
+                        onError={(e) => {
+                          console.warn(`Failed to load image ${index + 1}:`, image);
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  ))}
+                  
+                  {/* Subtle Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-primary/20"></div>
+                </div>
+
+                {/* Progress Indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImage(index)}
+                      className={`transition-all duration-300 ${
+                        index === currentImage ? 'w-12 h-3' : 'w-3 h-3'
+                      }`}
+                    >
+                      <div className={`h-full rounded-full transition-all duration-300 ${
+                        index === currentImage 
+                          ? 'bg-primary shadow-lg' 
+                          : 'bg-white/60 hover:bg-white/80'
+                      }`}>
+                        {index === currentImage && (
+                          <div 
+                            className="h-full bg-white rounded-full animate-progress-bar"
+                            style={{ animationDuration: `${slideDuration}ms` }}
+                          ></div>
+                        )}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Image Counter & Refresh Button */}
+                <div className="absolute top-4 right-4 flex items-center gap-2">
+                  <button
+                    onClick={handleRefreshImages}
+                    className="bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-200 group"
+                    title="Refresh banner images"
+                  >
+                    <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
+                  </button>
+                  <div className="bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+                    {currentImage + 1} / {images.length}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
