@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Heart, Shield, Users, FileText, Award, CheckCircle, ExternalLink, Eye, X, Copy, Phone, Mail, Building } from 'lucide-react';
 import donateImage from '../assets/images/donate/updesh-raj-MBFqUfiD8vU-unsplash.jpg';
 
 export default function DonatePage() {
+  const navigate = useNavigate();
   const [copiedText, setCopiedText] = React.useState('');
   const [showDonationForm, setShowDonationForm] = React.useState(false);
   const [showThankYou, setShowThankYou] = React.useState(false);
@@ -352,8 +354,8 @@ export default function DonatePage() {
               <button 
                 className="group bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary hover:text-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3"
                 onClick={() => {
-                  // Navigate to events/activities page
-                  window.location.href = '/events';
+                  // Navigate to events/activities page using React Router
+                  navigate('/events');
                 }}
               >
                 <Eye className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
