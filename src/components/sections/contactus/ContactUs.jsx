@@ -55,9 +55,9 @@ const ContactUs = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
             {/* Find Us */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
@@ -75,7 +75,7 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Details */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
@@ -99,33 +99,41 @@ const ContactUs = () => {
 
                 {/* Email */}
                 <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-primary/5 transition-colors duration-200">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="font-semibold text-gray-900">Email</p>
-                    <a href="mailto:contact@safetyresearchfoundation.org" className="text-primary hover:text-primary/80 transition-colors">
+                    <a href="mailto:contact@safetyresearchfoundation.org" className="text-primary hover:text-primary/80 transition-colors text-sm break-all">
                       contact@safetyresearchfoundation.org
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Office Hours */}
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Office Hours</p>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  </div>
+            {/* Office Hours */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Office Hours</h3>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Office Hours</p>
+                  <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 <Send className="w-6 h-6 text-white" />
@@ -133,9 +141,10 @@ const ContactUs = () => {
               <h3 className="text-2xl font-bold text-gray-900">Send Message</h3>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
+            <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
+              <div className="space-y-6 flex-1">
+                {/* Name */}
+                <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name *
                 </label>
@@ -231,6 +240,7 @@ const ContactUs = () => {
                     placeholder="Enter your message here..."
                   />
                 </div>
+              </div>
               </div>
 
               {/* Submit Button */}
