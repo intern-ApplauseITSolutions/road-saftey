@@ -885,7 +885,7 @@ Glimpses of Program`,
                       className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer"
                       onClick={() => openLightbox(mainImageIndex)}
                     >
-                      <div className="aspect-[16/9] bg-gray-100">
+                      <div className="aspect-[16/9] sm:aspect-[16/9] bg-gray-100">
                         <img
                           src={event.images[mainImageIndex]}
                           alt={`${event.title} - Main Image`}
@@ -945,7 +945,7 @@ Glimpses of Program`,
 
                 {/* Small Thumbnail Grid - All images */}
                 {event.images.length > 1 && (
-                  <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-3">
                     {event.images.map((image, index) => (
                       <div key={index} className="group relative">
                         <div 
@@ -1000,16 +1000,16 @@ Glimpses of Program`,
             )}
 
           {/* Event Description - Full Width */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <span className="w-1 h-8 bg-gradient-primary rounded-full"></span>
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 sm:h-8 bg-gradient-primary rounded-full"></span>
               About This Event
             </h2>
             
             {/* Event Information Inside About Section */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Event Information</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Event Information</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                   <Calendar className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
@@ -1057,12 +1057,12 @@ Glimpses of Program`,
           </div>
 
           {/* Impact Section - Full Width */}
-          <div className="bg-primary/10 rounded-xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <Award className="w-7 h-7 text-primary" />
-              <h3 className="text-2xl font-bold text-gray-900">Our Impact & Mission</h3>
+          <div className="bg-primary/10 rounded-xl p-4 sm:p-6 lg:p-8">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <Award className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-900">Our Impact & Mission</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-700">Promoting road safety awareness in communities</p>
@@ -1095,20 +1095,20 @@ Glimpses of Program`,
       {/* Lightbox Modal */}
       {lightboxOpen && event?.images && (
         <div 
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4"
           onClick={closeLightbox}
         >
           <div className="relative max-w-7xl w-full h-full flex items-center justify-center">
-            {/* Close Button - More Visible */}
+            {/* Close Button - More Visible and Mobile Friendly */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/40"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-[10000] bg-black/80 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/30 hover:border-white/50 shadow-lg"
               aria-label="Close lightbox"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons - Mobile Friendly */}
             {event.images.length > 1 && (
               <>
                 <button
@@ -1116,56 +1116,59 @@ Glimpses of Program`,
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/40"
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-[9999] bg-black/80 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/30 hover:border-white/50 shadow-lg"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/40"
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-[9999] bg-black/80 hover:bg-black/90 text-white p-2 sm:p-3 rounded-full transition-all duration-200 backdrop-blur-sm border border-white/30 hover:border-white/50 shadow-lg"
                   aria-label="Next image"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </>
             )}
 
-            {/* Main Image Container */}
+            {/* Main Image Container - Mobile Responsive */}
             <div 
-              className="relative max-h-full max-w-full flex items-center justify-center"
+              className="relative max-h-full max-w-full flex items-center justify-center px-12 sm:px-16"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={event.images[currentImageIndex]}
                 alt={`${event.title} - Image ${currentImageIndex + 1}`}
-                className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
-                style={{ maxHeight: 'calc(100vh - 120px)' }}
+                className="max-h-[80vh] sm:max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
+                style={{ maxHeight: 'calc(100vh - 140px)' }}
               />
             </div>
 
-            {/* Image Info Bar */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
-              <div className="bg-black/70 text-white px-6 py-3 rounded-full backdrop-blur-sm border border-white/20">
-                <div className="flex items-center gap-4 text-sm">
+            {/* Image Info Bar - Mobile Responsive */}
+            <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-[9999]">
+              <div className="bg-black/80 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-full backdrop-blur-sm border border-white/30 shadow-lg">
+                <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
                   <span className="font-medium">
                     {currentImageIndex + 1} / {event.images.length}
                   </span>
-                  <span className="text-white/70">•</span>
-                  <span className="text-white/90">
+                  <span className="text-white/70 hidden sm:inline">•</span>
+                  <span className="text-white/90 hidden sm:inline">
                     Press ESC to close, ← → to navigate
+                  </span>
+                  <span className="text-white/90 sm:hidden">
+                    Tap to close
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Thumbnail Strip */}
+            {/* Thumbnail Strip - Mobile Responsive */}
             {event.images.length > 1 && (
-              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20">
-                <div className="flex gap-2 max-w-md overflow-x-auto pb-2 px-2">
+              <div className="absolute bottom-12 sm:bottom-20 left-1/2 -translate-x-1/2 z-[9999]">
+                <div className="flex gap-1 sm:gap-2 max-w-xs sm:max-w-md overflow-x-auto pb-2 px-2">
                   {event.images.map((image, index) => (
                     <button
                       key={index}
@@ -1173,7 +1176,7 @@ Glimpses of Program`,
                         e.stopPropagation();
                         setCurrentImageIndex(index);
                       }}
-                      className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                      className={`flex-shrink-0 w-12 h-9 sm:w-16 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                         index === currentImageIndex
                           ? 'border-white shadow-lg scale-110'
                           : 'border-white/30 hover:border-white/60 hover:scale-105'
