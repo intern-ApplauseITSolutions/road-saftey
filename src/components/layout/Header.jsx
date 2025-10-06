@@ -1,16 +1,14 @@
 import { Phone, Mail, Heart, Menu, X, Linkedin, Facebook, HandHeart } from 'lucide-react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../../assets/logo/logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const scrollToDonate = () => {
-    const element = document.getElementById('donate');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigateToDonate = () => {
+    navigate('/donate');
     setIsMenuOpen(false);
   };
 
@@ -86,7 +84,7 @@ export default function Header() {
               <NavLink to="/contact" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
                 Contact Us
               </NavLink>
-              <button onClick={scrollToDonate} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
+              <button onClick={navigateToDonate} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
                 <Heart size={16} fill="currentColor" />
                 Donate
               </button>
@@ -121,7 +119,7 @@ export default function Header() {
                 <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
                   Contact Us
                 </NavLink>
-                <button onClick={scrollToDonate} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
+                <button onClick={navigateToDonate} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
                   <Heart size={16} fill="currentColor" />
                   Donate
                 </button>

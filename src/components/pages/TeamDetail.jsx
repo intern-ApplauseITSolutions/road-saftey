@@ -66,7 +66,6 @@ const teamMembers = [
     id: 5,
     bio: "With nearly 18 years of experience in the development and CSR sectors, Sandip Nawale brings a wealth of expertise in Project Management, Monitoring and Evaluation, Corporate Social Responsibility, and Community Development. He holds a Master degree in Social Work with a focus on Urban and Rural Community Development, and he is certified in CSR from the Indian Institute of Corporate Affairs (IICA).",
     details: "Sandip has effectively led impactful programs with various organizations, including Vestas Wind Technology and BAIF Development Research Foundation, where he championed initiatives in areas such as child safety, environmental conservation, Health & Education and rural livelihoods.\n\nAt the Safety Research Foundation, Sandip heads the operations with a strong commitment to road safety and public awareness, especially focused on vulnerable road users. His role encompasses not only program execution but also strategic planning and stakeholder engagement, CSR Partnerships aiming to expand SRF's reach and enhance the impact of its initiatives. His vision for SRF is to foster a safe, informed, and responsible community through sustainable and data-driven solutions.",
-    education: ["Master in Social Work (Urban and Rural Community Development)", "CSR Certification (Indian Institute of Corporate Affairs)"],
     achievements: ["18+ years in development and CSR sectors", "Led programs at Vestas Wind Technology", "Program leadership at BAIF Development Research Foundation"],
     expertise: ["Project Management", "Corporate Social Responsibility", "Community Development", "Road Safety", "Stakeholder Engagement"]
   }
@@ -76,6 +75,11 @@ export default function TeamDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   
+  // Scroll to top when component mounts or ID changes
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
+  
   const member = teamMembers.find(m => m.id === parseInt(id));
   
   if (!member) {
@@ -84,7 +88,13 @@ export default function TeamDetail() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Team Member Not Found</h1>
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              navigate(-1);
+              // Small delay to ensure navigation completes before scrolling
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }, 100);
+            }}
             className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
           >
             Go Back
@@ -100,7 +110,13 @@ export default function TeamDetail() {
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              navigate(-1);
+              // Small delay to ensure navigation completes before scrolling
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }, 100);
+            }}
             className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-200"
           >
             <ArrowLeft className="w-5 h-5" />
