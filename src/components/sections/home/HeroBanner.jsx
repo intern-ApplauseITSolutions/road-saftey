@@ -158,8 +158,7 @@ export default function HeroBanner() {
                     </div>
                   ))}
                   
-                  {/* Subtle Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-primary/20"></div>
+                  {/* Subtle Overlay - Removed bluish gradient */}
                 </div>
 
                 {/* Progress Indicators */}
@@ -174,7 +173,7 @@ export default function HeroBanner() {
                     >
                       <div className={`h-full rounded-full transition-all duration-300 ${
                         index === currentImage 
-                          ? 'bg-primary shadow-lg' 
+                          ? 'bg-primary' 
                           : 'bg-white/60 hover:bg-white/80'
                       }`}>
                         {index === currentImage && (
