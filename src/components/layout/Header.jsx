@@ -12,11 +12,8 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  const scrollToPledge = () => {
-    const element = document.getElementById('pledge');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigateToPledge = () => {
+    navigate('/pledge');
     setIsMenuOpen(false);
   };
 
@@ -88,7 +85,7 @@ export default function Header() {
                 <Heart size={16} fill="currentColor" />
                 Donate
               </button>
-              <button onClick={scrollToPledge} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
+              <button onClick={navigateToPledge} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
                 <HandHeart size={16} />
                 Take a Pledge
               </button>
@@ -123,7 +120,7 @@ export default function Header() {
                   <Heart size={16} fill="currentColor" />
                   Donate
                 </button>
-                <button onClick={scrollToPledge} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
+                <button onClick={navigateToPledge} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">
                   <HandHeart size={16} />
                   Take a Pledge
                 </button>
