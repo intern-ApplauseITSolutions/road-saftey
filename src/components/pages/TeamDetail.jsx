@@ -166,7 +166,7 @@ export default function TeamDetail() {
             {/* Bio Section */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <div className="w-1 h-8 bg-primary rounded-full"></div>
                 About {member.name.split(' ')[0]}
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg mb-6">{member.bio}</p>
@@ -213,10 +213,10 @@ export default function TeamDetail() {
 
             {/* Expertise Section */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Areas of Expertise</h3>
+              <h3 className="text-xl font-bold text-primary mb-6">Areas of Expertise</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {member.expertise.map((skill, index) => (
-                  <div key={index} className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-lg text-center font-semibold">
+                  <div key={index} className="bg-primary text-white px-4 py-2 rounded-lg text-center font-semibold">
                     {skill}
                   </div>
                 ))}
