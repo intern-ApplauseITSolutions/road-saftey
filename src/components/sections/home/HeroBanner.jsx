@@ -1,4 +1,4 @@
-import { Shield, ArrowRight, AlertCircle, RefreshCw } from 'lucide-react';
+import { Shield, ArrowRight, AlertCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getAllBannerImages, refreshBannerImages } from '../../../utils/imageLoader';
 
@@ -55,17 +55,6 @@ export default function HeroBanner() {
     }
   };
 
-  const handleRefreshImages = () => {
-    try {
-      const refreshedImages = refreshBannerImages();
-      setImages(refreshedImages);
-      setCurrentImage(0);
-    } catch (error) {
-      console.error('Failed to refresh banner images:', error);
-      // Fallback to regular load
-      loadImages();
-    }
-  };
 
   // Image carousel effect
   useEffect(() => {
@@ -99,20 +88,11 @@ export default function HeroBanner() {
 
             {/* Subtitle */}
             <p className="text-sm lg:text-base text-white/90 font-semibold mb-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              Promoting awareness, education, and training for road safety
+              Safety Research Foundation works to promote awareness, education, and training for road safety, driver behavior, and accident prevention. It focuses on research, community programs, and campaigns to reduce risks and save lives.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <button className="group bg-white hover:bg-gray-100 text-primary px-5 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2">
-                Get Involved
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="group bg-white hover:bg-gray-50 text-primary border-2 border-white px-5 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2">
-                Learn More
-                <AlertCircle className="w-4 h-4" />
-              </button>
-            </div>
+            {/* Spacer to maintain banner height */}
+            <div className="h-16"></div>
 
             {/* Bottom Stats */}
             <div className="mt-4 grid grid-cols-3 gap-2 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
@@ -208,15 +188,8 @@ export default function HeroBanner() {
                   ))}
                 </div>
 
-                {/* Image Counter & Refresh Button */}
-                <div className="absolute top-4 right-4 flex items-center gap-2">
-                  <button
-                    onClick={handleRefreshImages}
-                    className="bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-200 group"
-                    title="Refresh banner images"
-                  >
-                    <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
-                  </button>
+                {/* Image Counter */}
+                <div className="absolute top-4 right-4">
                   <div className="bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
                     {currentImage + 1} / {images.length}
                   </div>
