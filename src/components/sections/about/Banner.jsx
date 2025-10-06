@@ -3,7 +3,7 @@ import truck1 from '../../../assets/truckanimationpng/truck1.png';
 
 export default function Banner() {
   return (
-    <section className="relative w-full h-56 xs:h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] overflow-hidden bg-gradient-to-b from-[#068d87] to-[#056b66] z-30">
+    <section className="relative w-full h-56 xs:h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] overflow-hidden bg-gradient-to-b from-[#068d87] to-[#056b66] z-30" style={{overflowX: 'hidden'}}>
       {/* Road at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-16 xs:h-18 sm:h-20 md:h-22 lg:h-24 bg-gray-700">
         {/* Road Surface */}
@@ -63,8 +63,8 @@ export default function Banner() {
       {/* Custom Animation Styles */}
       <style jsx>{`
         @keyframes moveRight {
-          0% { transform: translateX(-120px); }
-          100% { transform: translateX(calc(100vw + 120px)); }
+          0% { transform: translateX(-150px); }
+          100% { transform: translateX(calc(100vw + 50px)); }
         }
       `}</style>
     </section>

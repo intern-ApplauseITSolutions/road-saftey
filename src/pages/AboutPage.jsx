@@ -8,10 +8,20 @@ export default function AboutPage() {
   // Scroll to top when component mounts
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Temporarily prevent horizontal scroll during page load
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.overflowX = 'hidden';
+    
+    // Clean up on unmount
+    return () => {
+      document.body.style.overflowX = '';
+      document.documentElement.style.overflowX = '';
+    };
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden w-full">
       <Banner />
       <TwoWheelerOrg />
       <RoadStructure />
