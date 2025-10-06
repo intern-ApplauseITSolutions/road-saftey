@@ -8,7 +8,7 @@ export default function FocusPage() {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <RoadSafetyFocus />
     </div>
   );

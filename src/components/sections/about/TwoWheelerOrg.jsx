@@ -58,7 +58,7 @@ const TwoWheelerOrg = () => {
           <div className="mx-4 sm:mx-6 flex items-center gap-2 sm:gap-3">
             <Bike className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={2} />
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center">
-              Two Wheeler Organization
+              Mission
             </h2>
           </div>
           <div className="flex-1 h-0.5 bg-gradient-to-l from-transparent via-primary to-primary"></div>
