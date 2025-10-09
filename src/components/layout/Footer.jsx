@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Shield, Linkedin, Facebook } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import footerLogo from '../../assets/logo/footer_logo.jpg';
 
 export default function Footer() {
@@ -47,29 +47,64 @@ export default function Footer() {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Quick Links</h3>
               <ul className="space-y-1.5 sm:space-y-2">
                 <li>
-                  <Link to="/" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <NavLink 
+                    to="/" 
+                    className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
+                      isActive 
+                        ? 'text-secondary border-secondary' 
+                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                    }`}
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/about" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <NavLink 
+                    to="/about" 
+                    className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
+                      isActive 
+                        ? 'text-secondary border-secondary' 
+                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                    }`}
+                  >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/focus" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <NavLink 
+                    to="/focus" 
+                    className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
+                      isActive 
+                        ? 'text-secondary border-secondary' 
+                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                    }`}
+                  >
                     Our Focus
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/events" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <NavLink 
+                    to="/events" 
+                    className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
+                      isActive 
+                        ? 'text-secondary border-secondary' 
+                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                    }`}
+                  >
                     News & Events
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <NavLink 
+                    to="/contact" 
+                    className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
+                      isActive 
+                        ? 'text-secondary border-secondary' 
+                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                    }`}
+                  >
                     Contact Us
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>

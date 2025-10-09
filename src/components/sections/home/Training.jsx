@@ -113,13 +113,13 @@ export default function Training() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {trainingPrograms.map((program) => (
-              <div key={program.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-black">
+              <div key={program.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-dashed border-primary/40 hover:border-primary/60">
                 {/* Image section with your actual images */}
-                <div className="h-48 sm:h-56 relative overflow-hidden">
+                <div className="h-48 sm:h-56 relative overflow-hidden border-2 border-dashed border-primary/30 m-2 rounded-xl">
                   <img 
                     src={program.image} 
                     alt={program.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                   {/* Overlay for better text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
