@@ -10,14 +10,20 @@ export default function Banner() {
         <div className="w-full h-full bg-gradient-to-b from-gray-600 to-gray-800"></div>
         
         {/* Road Markings - Dashed Lines */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 xs:h-0.5 sm:h-1 md:h-1 bg-yellow-300 transform -translate-y-1/2">
-          <div className="flex space-x-2 xs:space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8 animate-pulse">
-            {[...Array(12)].map((_, i) => (
-              <React.Fragment key={i}>
-                <div className="w-4 xs:w-5 sm:w-6 md:w-7 lg:w-8 h-0.5 xs:h-0.5 sm:h-1 md:h-1 bg-yellow-300"></div>
-                <div className="w-4 xs:w-5 sm:w-6 md:w-7 lg:w-8 h-0.5 xs:h-0.5 sm:h-1 md:h-1 bg-transparent"></div>
-              </React.Fragment>
-            ))}
+        <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
+          <div className="flex justify-between px-4">
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-8 sm:w-10 md:w-12 lg:w-14 h-0.5 sm:h-1 bg-yellow-300"></div>
           </div>
         </div>
         
