@@ -94,7 +94,7 @@ const RoadStructure = () => {
         }
         
         .center-glow {
-          box-shadow: 0 0 40px 20px rgba(255, 153, 51, 0.3);
+          box-shadow: 0 0 40px 20px rgba(204, 68, 0, 0.3);
         }
       `}</style>
       
@@ -165,12 +165,12 @@ const RoadStructure = () => {
                         animationDelay: `${index * 0.2}s`
                       }}
                     >
-                      <div className="bg-white rounded-xl shadow-2xl border-2 border-secondary/30 p-6 h-full relative overflow-hidden">
+                      <div className="bg-white rounded-xl shadow-2xl border-2 border-primary/30 p-6 h-full relative overflow-hidden">
                         {/* Background Accent */}
                         <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                         
                         {/* Number Badge */}
-                        <div className="absolute -top-3 -left-3 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg border-4 border-white">
+                        <div className="absolute -top-3 -left-3 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg border-4 border-white">
                           {team.id}
                         </div>
 
@@ -197,10 +197,10 @@ const RoadStructure = () => {
               </div>
 
               {/* Middle Rotating Ring */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] border-2 border-secondary border-dotted rounded-full opacity-40 animate-rotate-counter-clockwise"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] border-2 border-primary/70 border-dotted rounded-full opacity-40 animate-rotate-counter-clockwise"></div>
 
               {/* Inner Rotating Ring */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] border-3 border-primary border-double rounded-full opacity-50 animate-rotate-clockwise" 
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] border-3 border-primary/80 border-double rounded-full opacity-50 animate-rotate-clockwise" 
                    style={{ animationDuration: '25s' }}></div>
 
               {/* Connection Lines - Rotating with outer ring */}
@@ -217,7 +217,7 @@ const RoadStructure = () => {
                   return (
                     <div
                       key={`line-${team.id}`}
-                      className="absolute bg-gradient-to-r from-primary to-secondary h-0.5 opacity-40"
+                      className="absolute bg-gradient-to-r from-primary to-primary/70 h-0.5 opacity-40"
                       style={{
                         width: `${length}px`,
                         left: `${startX}px`,
@@ -238,13 +238,13 @@ const RoadStructure = () => {
               {teams.map((team) => (
                 <div 
                   key={team.id} 
-                  className="bg-white rounded-xl shadow-lg border-2 border-secondary/30 p-6 card-hover relative overflow-hidden"
+                  className="bg-white rounded-xl shadow-lg border-2 border-primary/30 p-6 card-hover relative overflow-hidden"
                 >
                   {/* Top Accent Line */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   
                   {/* Number Badge */}
-                  <div className="absolute -top-3 -left-3 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg border-4 border-white">
+                  <div className="absolute -top-3 -left-3 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg border-4 border-white">
                     {team.id}
                   </div>
 

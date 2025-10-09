@@ -7,7 +7,6 @@ import CallToAction from '../components/sections/home/CallToAction';
 import TwoWheelerOrganization from '../components/sections/home/TwoWheelerOrganization';
 import Training from '../components/sections/home/Training';
 import RoadScene from '../components/sections/home/RoadScene';
-import NewsletterPage from './NewsletterPage';
 
 export default function HomePage() {
   // Scroll to top when component mounts
@@ -21,7 +20,6 @@ export default function HomePage() {
       <RoadScene />
       <TwoWheelerOrganization />
       <Training />
-      <NewsletterPage />
       {/* <Stats />
       <Mission />
       <QuickLinks />
