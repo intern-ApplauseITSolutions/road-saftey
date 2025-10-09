@@ -66,19 +66,19 @@ export default function Header() {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6">
-              <NavLink to="/" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+              <NavLink to="/" className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                 Home
               </NavLink>
-              <NavLink to="/about" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+              <NavLink to="/about" className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                 About
               </NavLink>
-              <NavLink to="/focus" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+              <NavLink to="/focus" className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                 Our Focus
               </NavLink>
-              <NavLink to="/events" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+              <NavLink to="/events" className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                 News & Events
               </NavLink>
-              <NavLink to="/contact" className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+              <NavLink to="/contact" className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                 Contact Us
               </NavLink>
               <button onClick={navigateToDonate} className="bg-gradient-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center gap-2 shadow-md">
@@ -101,19 +101,19 @@ export default function Header() {
           {isMenuOpen && (
             <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
               <div className="flex flex-col gap-4">
-                <NavLink to="/" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+                <NavLink to="/" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                   Home
                 </NavLink>
-                <NavLink to="/about" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+                <NavLink to="/about" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                   About
                 </NavLink>
-                <NavLink to="/focus" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+                <NavLink to="/focus" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                   Our Focus
                 </NavLink>
-                <NavLink to="/events" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+                <NavLink to="/events" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                   News & Events
                 </NavLink>
-                <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition ${isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}>
+                <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `font-medium transition pb-1 border-b-2 border-dashed ${isActive ? 'text-primary border-primary' : 'text-gray-700 hover:text-primary border-transparent hover:border-primary/30'}`}>
                   Contact Us
                 </NavLink>
                 <button onClick={navigateToDonate} className="bg-gradient-primary text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition flex items-center justify-center gap-1">

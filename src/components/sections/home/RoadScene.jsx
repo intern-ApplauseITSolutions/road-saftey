@@ -11,23 +11,20 @@ export default function RoadScene() {
         <div className="w-full h-full bg-gradient-to-b from-gray-600 to-gray-800"></div>
         
         {/* Road Markings - Dashed Lines */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 sm:h-1 bg-yellow-300 transform -translate-y-1/2">
-          <div className="flex space-x-4 sm:space-x-6 md:space-x-8 animate-pulse">
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-transparent"></div>
-            <div className="w-6 sm:w-7 md:w-8 h-0.5 sm:h-1 bg-yellow-300"></div>
+        <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
+          <div className="flex justify-between px-4">
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-yellow-300"></div>
           </div>
         </div>
         

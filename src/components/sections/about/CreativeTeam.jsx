@@ -121,7 +121,7 @@ export default function CreativeTeam() {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border-2 border-dashed border-primary/40 hover:border-primary/60"
                 onClick={() => handleTeamMemberClick(member.id)}
               >
                 {/* Team Member Photo */}
