@@ -23,17 +23,17 @@ export default function Footer() {
               {/* Social Media Icons */}
               <div className="flex gap-2 sm:gap-3">
                 <a href="https://www.linkedin.com/in/safety-research-foundation-397695183/" target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-saffron/30 transition">
                     <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                 </a>
                 <a href="https://www.facebook.com/people/Safety-Research-Foundation/100069078591353/" target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-green/30 transition">
                     <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                 </a>
                 <a href="https://x.com/ResearchSafety" target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-saffron/30 transition">
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
@@ -47,27 +47,27 @@ export default function Footer() {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Quick Links</h3>
               <ul className="space-y-1.5 sm:space-y-2">
                 <li>
-                  <Link to="/" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <Link to="/" className="text-sm sm:text-base text-white hover:text-saffron transition">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <Link to="/about" className="text-sm sm:text-base text-white hover:text-green transition">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/focus" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <Link to="/focus" className="text-sm sm:text-base text-white hover:text-saffron transition">
                     Our Focus
                   </Link>
                 </li>
                 <li>
-                  <Link to="/events" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <Link to="/events" className="text-sm sm:text-base text-white hover:text-green transition">
                     News & Events
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-sm sm:text-base text-white hover:text-secondary transition">
+                  <Link to="/contact" className="text-sm sm:text-base text-white hover:text-saffron transition">
                     Contact Us
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ export default function Footer() {
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Contact Info</h3>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start gap-2 sm:gap-3 group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-saffron/30 transition">
                     <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
                   </div>
                   <p className="text-white text-xs sm:text-sm">
@@ -87,18 +87,18 @@ export default function Footer() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-green/30 transition">
                     <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
                   </div>
-                  <a href="mailto:contact@safetyresearchfoundation.org" className="text-white hover:text-secondary transition text-xs sm:text-sm break-all">
+                  <a href="mailto:contact@safetyresearchfoundation.org" className="text-white hover:text-saffron transition text-xs sm:text-sm break-all">
                     contact@safetyresearchfoundation.org
                   </a>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 group">
-                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
+                  <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-green/30 transition">
                     <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
                   </div>
-                  <a href="tel:+917030910122" className="text-white hover:text-secondary transition text-xs sm:text-sm">
+                  <a href="tel:+917030910122" className="text-white hover:text-saffron transition text-xs sm:text-sm">
                     +91 7030910122
                   </a>
                 </div>
@@ -128,7 +128,7 @@ export default function Footer() {
           <div className="border-t border-white/20 pt-6 sm:pt-8 text-center">
             <p className="text-white text-xs sm:text-sm">
               &copy; {new Date().getFullYear()} Safety Research Foundation. All rights reserved. | 
-              <span className="text-secondary font-medium"> Committed to making Indian roads safer.</span>
+              <span className="text-saffron font-medium"> Committed to making Indian roads safer.</span>
             </p>
           </div>
         </div>

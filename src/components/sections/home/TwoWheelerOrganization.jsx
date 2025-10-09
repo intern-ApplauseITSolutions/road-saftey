@@ -300,7 +300,7 @@ export default function TwoWheelerOrganization() {
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start">
           {/* Left Side Content */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 h-full">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-black h-full">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-4 sm:mb-6">
               Safety Research Foundation
             </h3>
@@ -330,7 +330,7 @@ export default function TwoWheelerOrganization() {
           </div>
 
           {/* Right Side Content - Events */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-black hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
               Recent & Upcoming Events
             </h3>

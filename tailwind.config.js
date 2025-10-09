@@ -7,11 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#068d87',
-        secondary: '#efdf00'
+        primary: '#ff9933',
+        secondary: '#138808',
+        saffron: '#ff9933',
+        white: '#ffffff',
+        green: '#138808'
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #1669a0, #5aa378)'
+        'gradient-primary': 'linear-gradient(135deg, #ff9933, #138808)',
+        'gradient-tricolor': 'linear-gradient(to bottom, #ff9933 0%, #ffffff 50%, #138808 100%)'
       }
     },
   },
