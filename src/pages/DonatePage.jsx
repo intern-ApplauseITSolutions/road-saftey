@@ -152,7 +152,7 @@ export default function DonatePage() {
       {/* Registration Details Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-brand-black mb-8 text-center">
             Registration Details
           </h2>
           
@@ -162,21 +162,21 @@ export default function DonatePage() {
                 <div className="bg-primary/20 p-2 rounded-lg">
                   <FileText className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">12A Provisional Approval</h3>
+                <h3 className="text-lg font-semibold text-brand-black">12A Provisional Approval</h3>
               </div>
-              <p className="text-gray-700 font-mono text-sm sm:text-base">
+              <p className="text-brand-black/70 font-mono text-sm sm:text-base">
                 No. AATTS4811JE20206
               </p>
             </div>
             
-            <div className="bg-green-50 rounded-lg p-6 border border-green-200">
+            <div className="bg-brand-green/10 rounded-lg p-6 border border-brand-green/20">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-green-200 p-2 rounded-lg">
-                  <Award className="w-6 h-6 text-green-700" />
+                <div className="bg-brand-green/20 p-2 rounded-lg">
+                  <Award className="w-6 h-6 text-brand-green" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">80G Provisional Approval</h3>
+                <h3 className="text-lg font-semibold text-brand-black">80G Provisional Approval</h3>
               </div>
-              <p className="text-gray-700 font-mono text-sm sm:text-base">
+              <p className="text-brand-black/70 font-mono text-sm sm:text-base">
                 No. AATTS4811JF20206
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function DonatePage() {
         {/* Donation Details Section */}
         <div id="donation-details" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-xl shadow-lg p-8 sm:p-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-brand-black mb-8 text-center flex items-center justify-center gap-3">
               <div className="bg-primary/10 p-2 rounded-lg">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
@@ -195,15 +195,15 @@ export default function DonatePage() {
 
             {/* Bank Transfer Details */}
             <div className="bg-gray-50 rounded-lg p-6 sm:p-8 mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-semibold text-brand-black mb-6 flex items-center gap-2">
                 <Building className="w-6 h-6 text-primary" />
                 Bank Transfer Details
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Account Name</p>
-                    <p className="font-medium text-gray-900">Safety Research Foundation</p>
+                    <p className="text-sm text-brand-black/60 mb-1">Account Name</p>
+                    <p className="font-medium text-brand-black">Safety Research Foundation</p>
                   </div>
                   <button
                     onClick={() => copyToClipboard('Safety Research Foundation', 'Account Name')}
@@ -214,8 +214,8 @@ export default function DonatePage() {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Account Number</p>
-                    <p className="font-medium text-gray-900">XXXXXXXXXXXX</p>
+                    <p className="text-sm text-brand-black/60 mb-1">Account Number</p>
+                    <p className="font-medium text-brand-black">XXXXXXXXXXXX</p>
                   </div>
                   <button
                     onClick={() => copyToClipboard('XXXXXXXXXXXX', 'Account Number')}
@@ -226,8 +226,8 @@ export default function DonatePage() {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">IFSC Code</p>
-                    <p className="font-medium text-gray-900">XXXXXXXXX</p>
+                    <p className="text-sm text-brand-black/60 mb-1">IFSC Code</p>
+                    <p className="font-medium text-brand-black">XXXXXXXXX</p>
                   </div>
                   <button
                     onClick={() => copyToClipboard('XXXXXXXXX', 'IFSC Code')}
@@ -238,8 +238,8 @@ export default function DonatePage() {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Bank Name</p>
-                    <p className="font-medium text-gray-900">XXXXX Bank</p>
+                    <p className="text-sm text-brand-black/60 mb-1">Bank Name</p>
+                    <p className="font-medium text-brand-black">XXXXX Bank</p>
                   </div>
                   <button
                     onClick={() => copyToClipboard('XXXXX Bank', 'Bank Name')}
@@ -250,34 +250,34 @@ export default function DonatePage() {
                 </div>
               </div>
               {copiedText && (
-                <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-lg text-sm text-center">
+                <div className="mt-4 p-3 bg-brand-green/10 text-brand-green rounded-lg text-sm text-center">
                   {copiedText} copied to clipboard!
                 </div>
               )}
             </div>
 
             {/* Contact Information */}
-            <div className="bg-blue-50 rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Need Help?</h3>
+            <div className="bg-primary/10 rounded-lg p-6 sm:p-8">
+              <h3 className="text-xl font-semibold text-brand-black mb-6">Need Help?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-blue-600" />
+                  <div className="bg-primary/20 p-3 rounded-lg">
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Email</p>
-                    <a href="mailto:info@safetyresearchfoundation.org" className="text-blue-600 hover:text-blue-700 font-medium text-lg">
+                    <p className="text-sm text-brand-black/60 mb-1">Email</p>
+                    <a href="mailto:info@safetyresearchfoundation.org" className="text-primary hover:text-primary/80 font-medium text-lg">
                       info@safetyresearchfoundation.org
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                  <div className="bg-primary/20 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Phone</p>
-                    <a href="tel:+91XXXXXXXXXX" className="text-blue-600 hover:text-blue-700 font-medium text-lg">
+                    <p className="text-sm text-brand-black/60 mb-1">Phone</p>
+                    <a href="tel:+91XXXXXXXXXX" className="text-primary hover:text-primary/80 font-medium text-lg">
                       +91-XXXXXXXXXX
                     </a>
                   </div>
@@ -313,7 +313,7 @@ export default function DonatePage() {
 
             {/* Right Side - USP Points */}
             <div className="p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-brand-black mb-8">
                 Why Choose SRF?
               </h2>
               
@@ -324,8 +324,8 @@ export default function DonatePage() {
                       {point.icon}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{point.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{point.description}</p>
+                      <h4 className="font-semibold text-brand-black mb-2">{point.title}</h4>
+                      <p className="text-brand-black/60 text-sm leading-relaxed">{point.description}</p>
                     </div>
                   </div>
                 ))}
@@ -337,7 +337,7 @@ export default function DonatePage() {
         {/* Action Buttons Section */}
         <div className="mt-12 text-center">
           <div className="bg-white rounded-xl shadow-lg p-8 sm:p-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-brand-black mb-8">
               Make a Difference Today
             </h2>
             
@@ -363,9 +363,9 @@ export default function DonatePage() {
               </button>
             </div>
             
-            <div className="mt-8 p-6 bg-green-50 rounded-lg border border-green-200">
+            <div className="mt-8 p-6 bg-brand-green/10 rounded-lg border border-brand-green/20">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Award className="w-5 h-5 text-green-600" />
+                <Award className="w-5 h-5 text-brand-green" />
                 <span className="font-semibold text-green-800">Tax Benefit Available</span>
               </div>
               <p className="text-green-700 text-sm">
@@ -379,16 +379,16 @@ export default function DonatePage() {
 
         {/* Impact Statement */}
         <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-brand-black mb-6">
             Your Contribution Creates Real Impact
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">
+          <p className="text-brand-black/70 text-lg leading-relaxed max-w-4xl mx-auto">
             Every donation helps us conduct road safety awareness programs, support traffic police with safety equipment, 
             perform scientific crash investigations, and work towards building safer road infrastructure across India. 
             Together, we can save lives and make Indian roads safer for everyone.
           </p>
           <div className="mt-8 text-center">
-            <p className="text-gray-600 font-medium">
+            <p className="text-brand-black/60 font-medium">
               Thank you for supporting road safety in India!
             </p>
           </div>
@@ -402,7 +402,7 @@ export default function DonatePage() {
             <div className="p-6 sm:p-8">
               {/* Modal Header */}
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">WAY TO DONATION</h2>
+                <h2 className="text-2xl font-bold text-brand-black">WAY TO DONATION</h2>
                 <button
                   onClick={closeDonationForm}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -411,7 +411,7 @@ export default function DonatePage() {
                 </button>
               </div>
               
-              <p className="text-center text-gray-600 mb-6">(Donation Only In Indian Rupees)</p>
+              <p className="text-center text-brand-black/60 mb-6">(Donation Only In Indian Rupees)</p>
 
               {/* Tab Navigation */}
               <div className="flex border-b border-gray-200 mb-6">
@@ -420,7 +420,7 @@ export default function DonatePage() {
                   className={`px-6 py-3 font-medium transition-colors duration-200 border-b-2 ${
                     activeTab === 'individual'
                       ? 'border-primary text-primary'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                      : 'border-transparent text-gray-500 hover:text-brand-black/70'
                   }`}
                 >
                   Individual
@@ -430,7 +430,7 @@ export default function DonatePage() {
                   className={`px-6 py-3 font-medium transition-colors duration-200 border-b-2 ${
                     activeTab === 'organization'
                       ? 'border-primary text-primary'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                      : 'border-transparent text-gray-500 hover:text-brand-black/70'
                   }`}
                 >
                   Organisation
@@ -444,7 +444,7 @@ export default function DonatePage() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">First Name*</label>
                         <input
                           type="text"
                           required
@@ -454,7 +454,7 @@ export default function DonatePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Last Name*</label>
                         <input
                           type="text"
                           required
@@ -466,7 +466,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Email Address*</label>
                       <input
                         type="email"
                         required
@@ -477,7 +477,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number*</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Mobile Number*</label>
                       <div className="flex">
                         <span className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                           India +91
@@ -494,7 +494,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Select Your State*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Select Your State*</label>
                         <select
                           required
                           value={formData.individual.state}
@@ -508,7 +508,7 @@ export default function DonatePage() {
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Country</label>
                         <input
                           type="text"
                           value={formData.individual.country}
@@ -519,7 +519,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Donation Amount* (INR)</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Donation Amount* (INR)</label>
                       <input
                         type="number"
                         required
@@ -535,7 +535,7 @@ export default function DonatePage() {
                   /* Organization Form */
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Name of the Company*</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Name of the Company*</label>
                       <input
                         type="text"
                         required
@@ -547,7 +547,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Name of the Contact Person*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Name of the Contact Person*</label>
                         <input
                           type="text"
                           required
@@ -557,7 +557,7 @@ export default function DonatePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Designation of the Contact Person*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Designation of the Contact Person*</label>
                         <input
                           type="text"
                           required
@@ -569,7 +569,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Email Address*</label>
                       <input
                         type="email"
                         required
@@ -581,7 +581,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Mobile Number*</label>
                         <input
                           type="tel"
                           required
@@ -591,7 +591,7 @@ export default function DonatePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Landline Number</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Landline Number</label>
                         <input
                           type="tel"
                           value={formData.organization.landline}
@@ -602,7 +602,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Street Address*</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Street Address*</label>
                       <input
                         type="text"
                         required
@@ -613,7 +613,7 @@ export default function DonatePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Apartment, suite, etc</label>
+                      <label className="block text-sm font-medium text-brand-black/70 mb-1">Apartment, suite, etc</label>
                       <input
                         type="text"
                         value={formData.organization.apartment}
@@ -624,7 +624,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">City*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">City*</label>
                         <input
                           type="text"
                           required
@@ -634,7 +634,7 @@ export default function DonatePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">ZIP / Postal Code*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">ZIP / Postal Code*</label>
                         <input
                           type="text"
                           required
@@ -647,7 +647,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Select your state*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Select your state*</label>
                         <select
                           required
                           value={formData.organization.state}
@@ -661,7 +661,7 @@ export default function DonatePage() {
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Country</label>
                         <input
                           type="text"
                           value={formData.organization.country}
@@ -673,7 +673,7 @@ export default function DonatePage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Enter PAN Card Number*</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Enter PAN Card Number*</label>
                         <input
                           type="text"
                           required
@@ -684,7 +684,7 @@ export default function DonatePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Donation Amount* (INR)</label>
+                        <label className="block text-sm font-medium text-brand-black/70 mb-1">Donation Amount* (INR)</label>
                         <input
                           type="number"
                           required
@@ -724,35 +724,35 @@ export default function DonatePage() {
                 <div className="bg-green-100 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-12 h-12 text-green-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Thank You!</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-brand-black mb-2">Thank You!</h2>
+                <p className="text-brand-black/60 max-w-2xl mx-auto">
                   Thank You for your interest to Contribute for the cause of Road Safety. You may use the below mentioned SRF Bank Account details for online/NEFT/RTGS/IMPS transfer of funds through your bank account
                 </p>
               </div>
 
               {/* Bank Details */}
               <div className="bg-blue-50 rounded-lg p-6 mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">SRF Account Details for Bank Transfer</h3>
+                <h3 className="text-xl font-bold text-brand-black mb-4 text-center">SRF Account Details for Bank Transfer</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-600">Account name</p>
-                    <p className="font-semibold text-gray-900">Safety Research Foundation</p>
+                    <p className="text-sm text-brand-black/60">Account name</p>
+                    <p className="font-semibold text-brand-black">Safety Research Foundation</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-600">Account No</p>
-                    <p className="font-semibold text-gray-900">50200031767840</p>
+                    <p className="text-sm text-brand-black/60">Account No</p>
+                    <p className="font-semibold text-brand-black">50200031767840</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-600">Type of A/C</p>
-                    <p className="font-semibold text-gray-900">Current Account</p>
+                    <p className="text-sm text-brand-black/60">Type of A/C</p>
+                    <p className="font-semibold text-brand-black">Current Account</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-600">Bank Name</p>
-                    <p className="font-semibold text-gray-900">HDFC Bank Limited</p>
+                    <p className="text-sm text-brand-black/60">Bank Name</p>
+                    <p className="font-semibold text-brand-black">HDFC Bank Limited</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg md:col-span-2">
-                    <p className="text-sm text-gray-600">IFSC Code</p>
-                    <p className="font-semibold text-gray-900">HDFC0001068</p>
+                    <p className="text-sm text-brand-black/60">IFSC Code</p>
+                    <p className="font-semibold text-brand-black">HDFC0001068</p>
                   </div>
                 </div>
                 <div className="mt-4 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
@@ -767,13 +767,13 @@ export default function DonatePage() {
 
               {/* Alternative Payment Method */}
               <div className="bg-gray-50 rounded-lg p-6 mb-8">
-                <h4 className="font-semibold text-gray-900 mb-3">Alternative Payment Method</h4>
-                <p className="text-gray-700 mb-4">
+                <h4 className="font-semibold text-brand-black mb-3">Alternative Payment Method</h4>
+                <p className="text-brand-black/70 mb-4">
                   You may also donate via <strong>Cheque/Demand Draft</strong> in favour of <strong>Safety Research Foundation</strong>, 
                   Payable at Coimbatore and send to the following mailing address:
                 </p>
                 <div className="bg-white p-4 rounded-lg border">
-                  <address className="text-gray-700 not-italic">
+                  <address className="text-brand-black/70 not-italic">
                     <strong>Safety Research Foundation</strong><br />
                     Office No.504, S.No.128,<br />
                     Seasons Business Square, Seasons Road,<br />
@@ -796,7 +796,7 @@ export default function DonatePage() {
                 </button>
                 <button
                   onClick={closeDonationForm}
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
+                  className="bg-gray-100 text-brand-black/70 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
                 >
                   Close
                 </button>

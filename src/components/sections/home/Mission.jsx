@@ -12,28 +12,28 @@ export default function Mission() {
             
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <div className="w-6 sm:w-8 md:w-12 h-1 bg-secondary rounded"></div>
+                <div className="w-6 sm:w-8 md:w-12 h-1 bg-brand-orange rounded"></div>
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center">Our Mission</h3>
-                <div className="w-6 sm:w-8 md:w-12 h-1 bg-secondary rounded"></div>
+                <div className="w-6 sm:w-8 md:w-12 h-1 bg-brand-orange rounded"></div>
               </div>
               
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 leading-relaxed text-center max-w-4xl mx-auto mb-6 sm:mb-8">
-                More than <span className="font-bold text-secondary">400+ people die every day</span> on Indian roads due to traffic-related accidents. 
+                More than <span className="font-bold text-brand-orange">400+ people die every day</span> on Indian roads due to traffic-related accidents. 
                 Through our <span className="font-bold">RASSI initiative</span> and partnerships with OEMs, we orchestrate a decade of data-driven 
                 decisions to help address and bend the death/injury curve in India.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-white/90">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-brand-orange flex-shrink-0" />
                   <span className="text-sm sm:text-base">Infrastructure Change</span>
                 </div>
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-white/90">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-brand-orange flex-shrink-0" />
                   <span className="text-sm sm:text-base">Vehicle Safety</span>
                 </div>
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-white/90 sm:col-span-2 md:col-span-1">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-brand-orange flex-shrink-0" />
                   <span className="text-sm sm:text-base">Behavior Change</span>
                 </div>
               </div>

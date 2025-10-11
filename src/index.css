@@ -8,11 +8,11 @@
   /* Theme Colors */
   --background-color: #000;
   --bg-white: #fff;
-  --bs-primary: #068d87;
+  --bs-primary: #2A6BC7;
   --bs-secondary: #efdf00;
   --font-family: "Inter", sans-serif;
   --text-orange: #686662;
-  --yellow-color: linear-gradient(135deg, #1669a0, #5aa378);
+  --yellow-color: linear-gradient(135deg, #2A6BC7, #4A90E2);
   
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -58,12 +58,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #068d87;
+  background: #2A6BC7;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #056b66;
+  background: #1e4f9a;
 }
 
 /* Custom Animations for Hero Banner */

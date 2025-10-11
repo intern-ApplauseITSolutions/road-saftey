@@ -51,8 +51,8 @@ export default function Footer() {
                     to="/" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-secondary border-secondary' 
-                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                        ? 'text-brand-orange border-brand-orange' 
+                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
                     }`}
                   >
                     Home
@@ -63,8 +63,8 @@ export default function Footer() {
                     to="/about" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-secondary border-secondary' 
-                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                        ? 'text-brand-orange border-brand-orange' 
+                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
                     }`}
                   >
                     About
@@ -75,8 +75,8 @@ export default function Footer() {
                     to="/focus" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-secondary border-secondary' 
-                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                        ? 'text-brand-orange border-brand-orange' 
+                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
                     }`}
                   >
                     Our Focus
@@ -87,8 +87,8 @@ export default function Footer() {
                     to="/events" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-secondary border-secondary' 
-                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                        ? 'text-brand-orange border-brand-orange' 
+                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
                     }`}
                   >
                     News & Events
@@ -99,8 +99,8 @@ export default function Footer() {
                     to="/contact" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-secondary border-secondary' 
-                        : 'text-white border-transparent hover:text-secondary hover:border-secondary/50'
+                        ? 'text-brand-orange border-brand-orange' 
+                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
                     }`}
                   >
                     Contact Us
@@ -125,7 +125,7 @@ export default function Footer() {
                   <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
                     <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
                   </div>
-                  <a href="mailto:contact@safetyresearchfoundation.org" className="text-white hover:text-secondary transition text-xs sm:text-sm break-all">
+                  <a href="mailto:contact@safetyresearchfoundation.org" className="text-white hover:text-brand-orange transition text-xs sm:text-sm break-all">
                     contact@safetyresearchfoundation.org
                   </a>
                 </div>
@@ -133,7 +133,7 @@ export default function Footer() {
                   <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg group-hover:bg-white/30 transition">
                     <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
                   </div>
-                  <a href="tel:+917030910122" className="text-white hover:text-secondary transition text-xs sm:text-sm">
+                  <a href="tel:+917030910122" className="text-white hover:text-brand-orange transition text-xs sm:text-sm">
                     +91 7030910122
                   </a>
                 </div>
@@ -163,7 +163,7 @@ export default function Footer() {
           <div className="border-t border-white/20 pt-6 sm:pt-8 text-center">
             <p className="text-white text-xs sm:text-sm">
               &copy; {new Date().getFullYear()} Safety Research Foundation. All rights reserved. | 
-              <span className="text-secondary font-medium"> Committed to making Indian roads safer.</span>
+              <span className="text-brand-orange font-medium"> Committed to making Indian roads safer.</span>
             </p>
           </div>
         </div>

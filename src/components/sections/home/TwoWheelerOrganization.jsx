@@ -290,7 +290,7 @@ export default function TwoWheelerOrganization() {
           <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-primary to-primary"></div>
           <div className="mx-4 sm:mx-6 flex items-center gap-2 sm:gap-3">
             <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={2} />
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-black text-center">
               Road Safety Initiatives
             </h2>
           </div>
@@ -300,11 +300,11 @@ export default function TwoWheelerOrganization() {
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start">
           {/* Left Side Content */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-dashed border-primary/40 hover:border-primary/60 h-full transition-all duration-300">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-dashed border-brand-black hover:border-primary h-full transition-all duration-300">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-4 sm:mb-6">
               Safety Research Foundation
             </h3>
-            <div className="prose prose-sm sm:prose-base lg:prose-lg text-text-orange leading-relaxed">
+            <div className="prose prose-sm sm:prose-base lg:prose-lg text-brand-black leading-relaxed">
               <p className="mb-4">
                 More than 400+ people die every day in Indian roads due to traffic related accidents. 
                 The number is ever so slightly increasing over the past decade. We do not anticipate 
@@ -330,8 +330,8 @@ export default function TwoWheelerOrganization() {
           </div>
 
           {/* Right Side Content - Events */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-dashed border-primary/40 hover:border-primary/60 hover:shadow-xl transition-all duration-300">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border-2 border-dashed border-brand-black hover:border-primary hover:shadow-xl transition-all duration-300">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-black mb-4 sm:mb-6">
               Recent & Upcoming Events
             </h3>
             <div 
@@ -346,17 +346,17 @@ export default function TwoWheelerOrganization() {
                   className="event-card relative bg-gradient-to-r from-primary/5 to-white p-4 sm:p-5 rounded-lg border-l-4 border-primary cursor-pointer group overflow-hidden"
                 >
                   {/* Animated background glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Sliding accent bar enhancement */}
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-secondary transform -translate-x-1 group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-brand-orange transform -translate-x-1 group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                   
                   {/* Floating indicator */}
-                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
+                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-brand-orange rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
                   
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-2">
-                      <h5 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
+                      <h5 className="text-base sm:text-lg font-semibold text-brand-black group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
                         {event.title}
                       </h5>
                       <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap">
@@ -364,11 +364,11 @@ export default function TwoWheelerOrganization() {
                       </span>
                     </div>
                     <div className="space-y-1">
-                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
+                      <p className="text-xs sm:text-sm text-brand-black flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
                         <Calendar className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
                         <span className="leading-tight">{event.date}</span>
                       </p>
-                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
+                      <p className="text-xs sm:text-sm text-brand-black flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
                         <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
                         <span className="leading-tight">{event.location}</span>
                       </p>
@@ -390,17 +390,17 @@ export default function TwoWheelerOrganization() {
                   className="event-card relative bg-gradient-to-r from-primary/5 to-white p-4 sm:p-5 rounded-lg border-l-4 border-primary cursor-pointer group overflow-hidden"
                 >
                   {/* Animated background glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Sliding accent bar enhancement */}
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-secondary transform -translate-x-1 group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-brand-orange transform -translate-x-1 group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                   
                   {/* Floating indicator */}
-                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
+                  <div className="absolute -right-2 -top-2 w-4 h-4 bg-gradient-to-br from-primary to-brand-orange rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-200"></div>
                   
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-2">
-                      <h5 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
+                      <h5 className="text-base sm:text-lg font-semibold text-brand-black group-hover:text-primary transform group-hover:translate-x-2 transition-all duration-300 leading-tight flex-1 pr-2">
                         {event.title}
                       </h5>
                       <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap">
@@ -408,11 +408,11 @@ export default function TwoWheelerOrganization() {
                       </span>
                     </div>
                     <div className="space-y-1">
-                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
+                      <p className="text-xs sm:text-sm text-brand-black flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-75">
                         <Calendar className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
                         <span className="leading-tight">{event.date}</span>
                       </p>
-                      <p className="text-xs sm:text-sm text-text-orange flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
+                      <p className="text-xs sm:text-sm text-brand-black flex items-center gap-2 group-hover:text-primary/80 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
                         <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:text-primary transition-colors duration-300 flex-shrink-0" />
                         <span className="leading-tight">{event.location}</span>
                       </p>

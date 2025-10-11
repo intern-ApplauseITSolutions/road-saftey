@@ -113,9 +113,9 @@ export default function Training() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {trainingPrograms.map((program) => (
-              <div key={program.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-dashed border-primary/40 hover:border-primary/60">
+              <div key={program.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-dashed border-gray-900 hover:border-black">
                 {/* Image section with your actual images */}
-                <div className="h-48 sm:h-56 relative overflow-hidden border-2 border-dashed border-primary/30 m-2 rounded-xl">
+                <div className="h-48 sm:h-56 relative overflow-hidden m-2 rounded-xl">
                   <img 
                     src={program.image} 
                     alt={program.title} 
