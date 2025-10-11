@@ -51,8 +51,8 @@ export default function Footer() {
                     to="/" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-brand-orange border-brand-orange' 
-                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
+                        ? 'text-white border-white' 
+                        : 'text-white border-transparent hover:text-white hover:border-white/50'
                     }`}
                   >
                     Home
@@ -63,8 +63,8 @@ export default function Footer() {
                     to="/about" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-brand-orange border-brand-orange' 
-                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
+                        ? 'text-white border-white' 
+                        : 'text-white border-transparent hover:text-white hover:border-white/50'
                     }`}
                   >
                     About
@@ -75,8 +75,8 @@ export default function Footer() {
                     to="/focus" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-brand-orange border-brand-orange' 
-                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
+                        ? 'text-white border-white' 
+                        : 'text-white border-transparent hover:text-white hover:border-white/50'
                     }`}
                   >
                     Our Focus
@@ -87,8 +87,8 @@ export default function Footer() {
                     to="/events" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-brand-orange border-brand-orange' 
-                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
+                        ? 'text-white border-white' 
+                        : 'text-white border-transparent hover:text-white hover:border-white/50'
                     }`}
                   >
                     News & Events
@@ -99,8 +99,8 @@ export default function Footer() {
                     to="/contact" 
                     className={({ isActive }) => `text-sm sm:text-base transition-all duration-300 pb-1 border-b-2 border-dashed inline-block ${
                       isActive 
-                        ? 'text-brand-orange border-brand-orange' 
-                        : 'text-white border-transparent hover:text-brand-orange hover:border-brand-orange/50'
+                        ? 'text-white border-white' 
+                        : 'text-white border-transparent hover:text-white hover:border-white/50'
                     }`}
                   >
                     Contact Us
@@ -163,7 +163,7 @@ export default function Footer() {
           <div className="border-t border-white/20 pt-6 sm:pt-8 text-center">
             <p className="text-white text-xs sm:text-sm">
               &copy; {new Date().getFullYear()} Safety Research Foundation. All rights reserved. | 
-              <span className="text-brand-orange font-medium"> Committed to making Indian roads safer.</span>
+              <span className="text-white font-medium"> Committed to making Indian roads safer.</span>
             </p>
           </div>
         </div>
